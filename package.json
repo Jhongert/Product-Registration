@@ -1,0 +1,26 @@
+{
+  "name": "productregistration",
+  "version": "1.0.0",
+  "description": "A product registration app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jhongert/Product-Registration.git"
+  },
+  "author": "Jhongert Fuertes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jhongert/Product-Registration/issues"
+  },
+  "homepage": "https://github.com/Jhongert/Product-Registration#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "mysql2": "^1.4.2",
+    "sequelize": "^4.20.1"
+  }
+}
