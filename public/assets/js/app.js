@@ -52,15 +52,15 @@ $(document).ready(function(){
 
     	// Validate the price
     	var price = $('#price');
-    	if(parseFloat(price.val().trim()) < 0)
+    	if(price.val().trim() != "" && !/^\d+[\.]?\d+$/.test(price.val().trim()))
     	{
-    		displayError(price, 'Price must be 0 or greater.');
+    		displayError(price, 'Price must be a number 0 or greater.');
     		return false;
     	}
 
     	// Validate the stock for 0 or a whole number greater than 0
     	var stock = $('#stock');
-    	if(!/^\d+$/.test(stock.val().trim()))
+    	if(stock.val().trim() != "" && !/^\d+$/.test(stock.val().trim()))
     	{
     		displayError(stock, 'Stock must be 0 or a whole number greater than 0.');
     		return false;
