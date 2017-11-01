@@ -2,13 +2,17 @@
 var express = require('express');
 var db = require('../models');
 
-exports.index = function(req, res){
+exports.list = function(req, res){
 	db.product.findAll().then(function(data){
-		res.render("index", { products: data });
+		res.render("list", { products: data });
 	});
 }
 
 exports.create = function(req, res){
+	res.render("create");
+}
+
+exports.store = function(req, res){
 	db.product.create({
 		name: req.body.name,
 		department: req.body.department,
@@ -16,11 +20,12 @@ exports.create = function(req, res){
 		stock: req.body.stock ? parseInt(req.body.stock) : 0,
 		active: (req.body.active == 'true') ? true : false
 	})	
-	.then(function(data){
-		//res.json(data);
-		res.redirect('/product');
+	.then(function(){
+		res.redirect('create');
 	});
 }
+
+
 
 exports.delete = function(req, res){
 	res.send('create');
@@ -28,9 +33,7 @@ exports.delete = function(req, res){
 exports.update = function(req, res){
 	
 }
-exports.detail = function(req, res){
-	
-}
+
 
 // router.post('/burgers/insert', function(req, res){
 // 	db.Burger.create({

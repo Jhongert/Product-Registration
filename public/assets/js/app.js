@@ -15,7 +15,7 @@ $(document).ready(function(){
 		if(validate())
 		{
 			$('form').submit();
-			
+
 			// var data = {
 			// 	name: $('#name').val().trim(),
 			// 	department: $('#department').val(),
@@ -26,7 +26,7 @@ $(document).ready(function(){
 			// $.post('/product/create', data, function(res){
 			// 	clearInput();
 			// 	insertRow(res);
-			// })
+			// });
 		} 
 	});
 
