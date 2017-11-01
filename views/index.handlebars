@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="row" id="form">
 		<div class="col-sm-12">
-			 <form  method="POST" action="/product/insert" class="form-horizontal">
+			 <form  method="POST" action="/product/create" class="form-horizontal">
         		<div class="form-group">
             		<label for="name" class="col-sm-2 control-label">Product name</label>
             		<div class="col-sm-10">
@@ -12,6 +12,7 @@
             		<label for="department" class="col-sm-2 control-label">Deparment</label>
             		<div class="col-sm-10">
 	            		<select id="department"class="form-control" name="department">
+	            			<option value=""></option>
 	            			<option value="books">Books</option>
 	            			<option value="movies">Movies</option>
 	            			<option value="electronic">Electronic</option>
@@ -65,7 +66,13 @@
 	                        <td>{{this.department}}</td>
 	                        <td>{{this.price}}</td>
 	                        <td>{{this.stock}}</td>
-	                        <td>{{this.active ? 'Yes' : 'No'}}</td>
+	                        <td>
+	                        	{{#if this.active}}
+	                        		Yes
+	                        	{{else}}
+	                        	  	No
+	                        	{{/if}}
+	                    	</td>
 	                        <td><a data-id="{{this.id}}"" class="btn btn-default btn-sm btn-edit"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a></td>
 	                    </tr>
 					{{/each}}

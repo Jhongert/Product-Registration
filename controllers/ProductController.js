@@ -17,7 +17,8 @@ exports.create = function(req, res){
 		active: (req.body.active == 'true') ? true : false
 	})	
 	.then(function(data){
-		res.json(data);
+		//res.json(data);
+		res.redirect('/product');
 	});
 }
 

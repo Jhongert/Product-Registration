@@ -2,7 +2,7 @@ $(document).ready(function(){
 	// datatable config
     $('table').DataTable({
         "columnDefs": [
-            { "orderable": false, "targets": [3] }
+            { "orderable": false, "targets": [5] }
           ],
         order: [[ 0, "asc" ]],
         info: false,
@@ -14,20 +14,33 @@ $(document).ready(function(){
 		
 		if(validate())
 		{
-			var data = {
-				name: $('#name').val().trim(),
-				department: $('#department').val(),
-				price: $('#price').val().trim(),
-				stock: $('#stock').val().trim(),
-				active: $('#active').is(":checked")
-			}
-			$.post('/product/create', data, function(res){
-				console.log(res);
-			})
+			$('form').submit();
+			
+			// var data = {
+			// 	name: $('#name').val().trim(),
+			// 	department: $('#department').val(),
+			// 	price: $('#price').val().trim(),
+			// 	stock: $('#stock').val().trim(),
+			// 	active: $('#active').is(":checked")
+			// }
+			// $.post('/product/create', data, function(res){
+			// 	clearInput();
+			// 	insertRow(res);
+			// })
 		} 
 	});
 
-    
+    // function clearInput(){
+    // 	$('#name').val('');
+    // 	$('#department').val('');
+    // 	$('#price').val('');
+    // 	$('#stock').val('');
+    // 	$('#active').attr("checked", "checked");
+    // }
+
+    // function insertRow(data){
+
+    // }
          
     // Validate user's input         
     function validate(){
