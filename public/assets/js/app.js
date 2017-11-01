@@ -21,7 +21,9 @@ $(document).ready(function(){
 				stock: $('#stock').val().trim(),
 				active: $('#active').is(":checked")
 			}
-			console.log(data);
+			$.post('/product/insert', data, function(res){
+				console.log(res);
+			})
 		} 
 	});
 

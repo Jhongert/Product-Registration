@@ -1,6 +1,7 @@
 // Express
 var express = require("express");
 var app = express();
+var product = require('./routes/product');
 
 var PORT = process.env.PORT || 3000;
 
@@ -27,7 +28,11 @@ app.set("view engine", "handlebars");
 app.use(express.static(__dirname + '/public'));
 
 // Router
-app.use('/', require('./controllers/ProductController'));
+//app.use('/', function(req, res){
+//	res.redirect("/product");
+//});
+
+app.use('/product', product);
 
 // Handle 404
 app.use(function(req, res) {

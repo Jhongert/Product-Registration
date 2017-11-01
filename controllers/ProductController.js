@@ -2,18 +2,25 @@
 var express = require('express');
 var db = require('../models');
 
-//Create all our routes
-var router = express.Router();
-
-router.get('/', function(req, res){
-	res.redirect("index");
-});
-
-router.get('/index', function(req, res){
+exports.index = function(req, res){
 	db.product.findAll().then(function(data){
 		res.render("index", { products: data });
 	});
-});
+}
+
+exports.create = function(req, res){
+	res.send('create');
+}
+
+exports.delete = function(req, res){
+	res.send('create');
+}
+exports.update = function(req, res){
+	
+}
+exports.detail = function(req, res){
+	
+}
 
 // router.post('/burgers/insert', function(req, res){
 // 	db.Burger.create({
@@ -42,4 +49,3 @@ router.get('/index', function(req, res){
 // });
 
 // Export router
-module.exports = router;
