@@ -9,7 +9,16 @@ exports.index = function(req, res){
 }
 
 exports.create = function(req, res){
-	res.send('create');
+	db.product.create({
+		name: req.body.name,
+		department: req.body.department,
+		price: req.body.price ? parseFloat(req.body.price) : 0.00,
+		stock: req.body.stock ? parseInt(req.body.stock) : 0,
+		active: (req.body.active == 'true') ? true : false
+	})	
+	.then(function(data){
+		res.json(data);
+	});
 }
 
 exports.delete = function(req, res){

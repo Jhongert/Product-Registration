@@ -21,7 +21,7 @@ $(document).ready(function(){
 				stock: $('#stock').val().trim(),
 				active: $('#active').is(":checked")
 			}
-			$.post('/product/insert', data, function(res){
+			$.post('/product/create', data, function(res){
 				console.log(res);
 			})
 		} 

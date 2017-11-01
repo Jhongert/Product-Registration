@@ -23,20 +23,14 @@ module.exports = function(sequelize, DataTypes){
 			type: DataTypes.FLOAT(11,2),
 			defaultValue: 0.00,
 			validate: {
-      			min: {
-      				args: 0.00,
-        			msg: "Price must be 0 or greater."
-      			}
+      			min: 0
 			}
 		},
 		stock: {
 			type: DataTypes.INTEGER,
 			defaultValue: 0,
 			validate: {
-				min: {
-					args: 0,
-        			msg: "Stock must be 0 or greater."
-				}
+				min: 0
 			}
 		},
 		active: {
