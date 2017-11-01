@@ -1,0 +1,55 @@
+<div class="container">
+	<div class="row">
+		<div class="col-sm-8">
+			<h1>Edit Product</h1>
+			<form  method="POST" action="/product/store" class="form-horizontal">
+        		<div class="form-group">
+            		<label for="name" class="col-sm-2 control-label">Name</label>
+            		<div class="col-sm-10">
+            			<input id="name" type="text" class="form-control" name="name" required autofocus value="{{product.name}}">
+            		</div>
+        		</div>
+        		<div class="form-group">
+            		<label for="department" class="col-sm-2 control-label">Deparment</label>
+            		<div class="col-sm-10">
+	            		<select id="department"class="form-control" name="department">
+	            			<option value=""></option>
+	            			<option value="books">Books</option>
+	            			<option value="movies">Movies</option>
+	            			<option value="electronic">Electronic</option>
+	            			<option value="home">Home</option>
+	            			<option value="beauty">Beauty</option>
+	            		</select>
+	            	</div>
+        		</div>
+        		<div class="form-group">
+            		<label for="price" class="col-sm-2 control-label">Price</label>
+            		<div class="col-sm-10">
+            			<input id="price" type="text" class="form-control" name="price" placeholder="0.00" value="{{product.price}}">
+            		</div>
+        		</div>
+        		<div class="form-group">
+            		<label for="stock" class="col-sm-2 control-label">Stock</label>
+            		<div class="col-sm-10">
+            			<input id="stock" type="text" class="form-control" name="stock" placeholder="0" value="{{product.stock}}">
+            		</div>
+        		</div>
+        		<div class="form-group">
+                    <label class="col-sm-10 col-sm-offset-2">
+                        <input id="active" type="checkbox" name="active" 
+                        {{#if product.active}} 
+                            checked
+                        {{/if}}
+                        > Active
+                    </label>
+                </div>
+                <input type="hidden" name="id" value="{{product.id}}">
+                
+        	</form>
+        	<div class="form-group">
+                <button type="Submit" class="btn btn-primary" id="submit">Submit</button>
+            </div>
+		</div>
+	</div>
+</div>
+

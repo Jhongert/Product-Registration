@@ -25,14 +25,28 @@ exports.store = function(req, res){
 	});
 }
 
-
-
 exports.delete = function(req, res){
-	res.send('create');
+	// var id = req.params.id;
+	db.product.destroy({
+		where: 
+			{id: req.params.id}
+	}).then(function(){
+		res.json('ok');
+		}
+	);
 }
-exports.update = function(req, res){
+
+
+exports.edit = function(req, res){
+	db.product.findById(req.params.id)
+		.then(function(data){
+			res.render("edit", { product: data });
+	});
+}
+
+// exports.update = function(req, res){
 	
-}
+// }
 
 
 // router.post('/burgers/insert', function(req, res){

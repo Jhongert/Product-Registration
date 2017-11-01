@@ -10,19 +10,20 @@ router.get('/', productController.list);
 // GET request for insert a new product
 router.get('/create', productController.create);
 
+// GET request for edit one product
+router.get('/:id/edit', productController.edit);
+
 // POST request for STORE a new product
 router.post('/store', productController.store);
-
 
 // POST request to delete a product
 router.post('/:id/delete', productController.delete);
 
-// GET request for one product
-router.get('/:id', productController.detail);
+
 
 
 
 // POST request to update a product
-router.post('/:id/update', productController.update);
+//router.post('/:id/update', productController.update);
 
 module.exports = router;

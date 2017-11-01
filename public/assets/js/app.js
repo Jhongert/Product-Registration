@@ -41,7 +41,33 @@ $(document).ready(function(){
     // function insertRow(data){
 
     // }
-         
+    
+
+
+    // Delete button class onClick event. Those are the delete buttons inside the table
+    // Each of those buttons has a unique data-id attr
+    $(document).on("click", ".btn-delete", function(){
+        var id = $(this).attr("data-id"); //get the product id from the data-id
+
+        //Pass this id to the delete button in the confirm dialog box
+        $("#deleteProduct").attr("data-id", id);
+
+        //Show the dialog box
+        $("#confirm-delete").modal();
+    });
+
+    // This is the delete button in the confirm dialog box
+    $("#deleteProduct").on("click", function(){
+        var id = $(this).attr("data-id"); //get the product id from its data attr
+
+        // Remove the record from the database
+        var url = 'product/' + id + '/delete'
+        $.post(url, function(){
+        	//Remove the row from the table
+        	$('#' + id).remove();
+        });
+    });
+
     // Validate user's input         
     function validate(){
 
