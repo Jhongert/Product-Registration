@@ -20,7 +20,7 @@ exports.store = function(req, res){
 		department: req.body.department,
 		price: req.body.price ? parseFloat(req.body.price) : 0.00,
 		stock: req.body.stock ? parseInt(req.body.stock) : 0,
-		active: (req.body.active == 'true') ? true : false
+		active: (req.body.active == 'on') ? true : false
 	})	
 	.then(function(){
 		res.redirect('create');
@@ -37,7 +37,6 @@ exports.delete = function(req, res){
 	);
 }
 
-
 exports.edit = function(req, res){
 	db.product.findById(req.params.id)
 		.then(function(data){
@@ -52,9 +51,23 @@ exports.edit = function(req, res){
 	});
 }
 
-// exports.update = function(req, res){
+
+exports.update = function(req, res){
+	console.log(req.body.active);
+	db.product.update({
+		name: req.body.name,
+		department: req.body.department,
+		price: req.body.price ? parseFloat(req.body.price) : 0.00,
+		stock: req.body.stock ? parseInt(req.body.stock) : 0,
+		active: (req.body.active == 'on') ? true : false
+	}, {where: {
+		id: req.body.id
+	}})
+	.then(function(){
+		res.redirect('/product');
+	});
 	
-// }
+}
 
 
 // router.post('/burgers/insert', function(req, res){

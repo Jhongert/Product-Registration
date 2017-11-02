@@ -16,6 +16,9 @@ router.get('/:id/edit', productController.edit);
 // POST request for STORE a new product
 router.post('/store', productController.store);
 
+// PUT request to update a product
+router.post('/update', productController.update);
+
 // POST request to delete a product
 router.post('/:id/delete', productController.delete);
 
