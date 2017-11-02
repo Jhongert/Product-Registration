@@ -9,40 +9,16 @@ $(document).ready(function(){
         paging: false,
     });
 
+    // Validate the form before submit it
 	$('#submit').on('click', function(e){
 		e.preventDefault();
 		
 		if(validate())
 		{
 			$('form').submit();
-
-			// var data = {
-			// 	name: $('#name').val().trim(),
-			// 	department: $('#department').val(),
-			// 	price: $('#price').val().trim(),
-			// 	stock: $('#stock').val().trim(),
-			// 	active: $('#active').is(":checked")
-			// }
-			// $.post('/product/create', data, function(res){
-			// 	clearInput();
-			// 	insertRow(res);
-			// });
 		} 
 	});
-
-    // function clearInput(){
-    // 	$('#name').val('');
-    // 	$('#department').val('');
-    // 	$('#price').val('');
-    // 	$('#stock').val('');
-    // 	$('#active').attr("checked", "checked");
-    // }
-
-    // function insertRow(data){
-
-    // }
     
-
 
     // Delete button class onClick event. Those are the delete buttons inside the table
     // Each of those buttons has a unique data-id attr
@@ -118,7 +94,7 @@ $(document).ready(function(){
 		// Add the message passed as argument to the new span
 	    $span.html('<strong>' + message + '<strong>');
 
-	    //Append the span to element that is not valid
+	    //Append the span after the input that is not valid
 	    el.after($span);
 	   
 	    // Set the focus 
@@ -127,5 +103,4 @@ $(document).ready(function(){
 	    // Add class "has-error to the element's parent"
 	    el.parent().addClass('has-error');
 	}
-
-})
+});

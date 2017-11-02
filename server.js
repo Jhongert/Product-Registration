@@ -16,10 +16,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
-//Lets you use HTTP verbs such as PUT or DELETE in places where the client doesn't support it (HTML5)
-//var methodOverride = require("method-override");
-//app.use(methodOverride("_method"));
-
 // Handlebars
 var exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
@@ -29,10 +25,6 @@ app.set("view engine", "handlebars");
 app.use(express.static(path.join(__dirname, '/public')));
 
 // Router
-//app.use('/', function(req, res){
-//	res.redirect("/product");
-//});
-
 app.use('/product', product);
 
 // Handle 404
