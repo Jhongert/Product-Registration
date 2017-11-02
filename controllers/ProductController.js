@@ -1,6 +1,8 @@
 // Dependencies
 var express = require('express');
 var db = require('../models');
+var departments = require('../config/departments');
+
 
 exports.list = function(req, res){
 	db.product.findAll().then(function(data){
@@ -9,7 +11,7 @@ exports.list = function(req, res){
 }
 
 exports.create = function(req, res){
-	res.render("create");
+	res.render("create", { department: departments});
 }
 
 exports.store = function(req, res){
@@ -26,7 +28,6 @@ exports.store = function(req, res){
 }
 
 exports.delete = function(req, res){
-	// var id = req.params.id;
 	db.product.destroy({
 		where: 
 			{id: req.params.id}
@@ -40,7 +41,14 @@ exports.delete = function(req, res){
 exports.edit = function(req, res){
 	db.product.findById(req.params.id)
 		.then(function(data){
-			res.render("edit", { product: data });
+			for (var i = 0 in departments) {
+				if(departments[i].value == data.department){
+			  		departments[i].selected = true;
+				} else {
+					departments[i].selected = false;
+				}
+			}
+			res.render("edit", { product: data, department: departments });
 	});
 }
 

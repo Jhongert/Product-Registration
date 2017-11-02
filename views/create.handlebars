@@ -13,13 +13,11 @@
             		<label for="department" class="col-sm-2 control-label">Deparment</label>
             		<div class="col-sm-10">
 	            		<select id="department"class="form-control" name="department">
-	            			<option value=""></option>
-	            			<option value="books">Books</option>
-	            			<option value="movies">Movies</option>
-	            			<option value="electronic">Electronic</option>
-	            			<option value="home">Home</option>
-	            			<option value="beauty">Beauty</option>
-	            		</select>
+                            <option value=""></option>
+                        {{#each department}}
+                            <option value={{this.value}}>{{this.text}}</option>
+                        {{/each}}
+                        </select>
 	            	</div>
         		</div>
         		<div class="form-group">

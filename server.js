@@ -2,6 +2,7 @@
 var express = require("express");
 var app = express();
 var product = require('./routes/product');
+var path = require('path');
 
 var PORT = process.env.PORT || 3000;
 
@@ -25,7 +26,7 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Serve static content for the app from the "public" directory in the application directory.
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(path.join(__dirname, '/public')));
 
 // Router
 //app.use('/', function(req, res){
