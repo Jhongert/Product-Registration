@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 // Require controller modules
-var productController = require('../controllers/productController');
+var productController = require('../controllers/productcontroller');
 
 // Get request to get all products
 router.get('/', productController.list);
