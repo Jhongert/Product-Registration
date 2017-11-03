@@ -6,13 +6,16 @@ A CRUD product registration app. On the server side this app uses Node and MySQL
 
 ![Create](https://github.com/Jhongert/Product-Registration/blob/master/public/assets/images/create.jpeg?raw=true)
 
-- The List page allows user to see the products saved in the database, search, sort and edit or delete then.
+- The List page allows user to see the products saved in the database, search, sort and edit or delete them.
 
 ![Create](https://github.com/Jhongert/Product-Registration/blob/master/public/assets/images/list.jpeg?raw=true)
 
-- The edit form allows users to edit a existing product
+- The edit form allows users to edit a existing product.
 
 ![Create](https://github.com/Jhongert/Product-Registration/blob/master/public/assets/images/edit.jpeg?raw=true)
+
+- This is the alert when the user presses the delete button.
+![Create](https://github.com/Jhongert/Product-Registration/blob/master/public/assets/images/delete.jpeg?raw=true)
 
 ## Build with
 - Node.js
