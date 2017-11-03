@@ -46,14 +46,18 @@ exports.delete = function(req, res){
 exports.edit = function(req, res){
 	db.product.findById(req.params.id)
 		.then(function(data){
-			for (var i = 0 in departments) {
-				if(departments[i].value == data.department){
-			  		departments[i].selected = true;
-				} else {
-					departments[i].selected = false;
+			if(data){
+				for (var i = 0 in departments) {
+					if(departments[i].value == data.department){
+				  		departments[i].selected = true;
+					} else {
+						departments[i].selected = false;
+					}
 				}
-			}
-			res.render("edit", { product: data, department: departments});
+				res.render("edit", { product: data, department: departments});
+			} else {
+				res.render('404');
+			} 
 	});
 }
 
