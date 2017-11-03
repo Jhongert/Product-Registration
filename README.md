@@ -10,7 +10,9 @@ A CRUD product registration app. On the server side this app uses Node and MySQL
 
 ![Create](https://github.com/Jhongert/Product-Registration/blob/master/public/assets/images/list.jpeg?raw=true)
 
-- Each burger in the waiting area also an input to enter the name of the customer and a Devour it! button. When the user clicks it, the burger will move to the right side of the page.
+- The edit form allows users to edit a existing product
+
+![Create](https://github.com/Jhongert/Product-Registration/blob/master/public/assets/images/edit.jpeg?raw=true)
 
 ## Build with
 - Node.js
