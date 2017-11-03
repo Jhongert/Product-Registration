@@ -36,7 +36,7 @@ app.set("view engine", "handlebars");
 app.use(express.static(path.join(__dirname, '/public')));
 
 // Router
-app.use('/product', product);
+app.use('/', product);
 
 // Handle 404
 app.use(function(req, res) {

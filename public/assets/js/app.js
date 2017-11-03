@@ -37,7 +37,7 @@ $(document).ready(function(){
         var id = $(this).attr("data-id"); //get the product id from its data attr
 
         // Remove the record from the database
-        var url = 'product/' + id + '/delete'
+        var url = '/' + id + '/delete'
         $.post(url, function(){
         	//Remove the row from the table
         	$('#' + id).remove();

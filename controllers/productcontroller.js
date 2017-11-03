@@ -70,7 +70,7 @@ exports.update = function(req, res){
 		id: req.body.id
 	}})
 	.then(function(){
-		res.redirect('/product');
+		res.redirect('/');
 	});
 	
 }
