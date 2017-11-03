@@ -3,7 +3,6 @@ var express = require("express");
 var app = express();
 var product = require('./routes/product');
 var path = require('path');
-
 var PORT = process.env.PORT || 3000;
 
 // Requiring our models for syncing
@@ -18,8 +17,20 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 // Handlebars
 var exphbs = require("express-handlebars");
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+
+// Helper to format the price with 2 decimals
+var hbs = exphbs.create({
+	helpers: {
+		formatPrice: function(price) {
+  			price = price.toFixed(2);
+  			return price;
+  		}
+  	},
+  	defaultLayout: 'main'
+});
+app.engine('handlebars', hbs.engine);
 app.set("view engine", "handlebars");
+
 
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static(path.join(__dirname, '/public')));

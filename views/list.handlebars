@@ -17,7 +17,7 @@
 	                    <tr id="{{this.id}}">
 	                        <td>{{this.name}}</td>
 	                        <td>{{this.department}}</td>
-	                        <td>{{this.price}}</td>
+	                        <td>{{ formatPrice this.price}}</td>
 	                        <td>{{this.stock}}</td>
 	                        <td>
 	                        	{{#if this.active}}

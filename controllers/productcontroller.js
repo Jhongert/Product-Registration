@@ -53,7 +53,7 @@ exports.edit = function(req, res){
 					departments[i].selected = false;
 				}
 			}
-			res.render("edit", { product: data, department: departments });
+			res.render("edit", { product: data, department: departments});
 	});
 }
 
