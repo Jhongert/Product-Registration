@@ -4,6 +4,8 @@ A CRUD product registration app. On the server side this app uses Node and MySQL
 ## How it works
 - SequelizedBurger! is a restaurant app that lets users input the names of burgers they'd like to eat and the name of the customer.
 
+![Bamazon Customer](https://github.com/Jhongert/Product-Registration/blob/master/public/assets/images/create.jpeg?raw=true)
+
 - Whenever a user submits a burger's name, the app will display the burger on the left side of the page -- waiting to be devoured.
 
 - Each burger in the waiting area also an input to enter the name of the customer and a Devour it! button. When the user clicks it, the burger will move to the right side of the page.
