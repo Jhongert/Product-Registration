@@ -17,13 +17,20 @@ A CRUD product registration app. On the server side this app uses Node and MySQL
 - This is the alert when the user presses the delete button.
 ![Create](https://github.com/Jhongert/Product-Registration/blob/master/public/assets/images/delete.jpeg?raw=true)
 
-### Installing
+## Installing
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 Open Terminal/bash window
 - Clone this repo. `git clone https://github.com/Jhongert/Product-Registration.git`
 - Navigate to bamazon folder. `cd Product-Registration`
 - Install all dependencies. `npm install`
 - Import database `db.sql`
+
+### Dependencies
+- **express**
+- **body-parser** 
+- **cexpress-handlebars** 
+- **mysql2**
+- **sequelize**
 
 ## Build with
 - Node.js
