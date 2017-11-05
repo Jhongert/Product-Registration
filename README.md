@@ -24,6 +24,7 @@ Open Terminal/bash window
 - Navigate to bamazon folder. `cd Product-Registration`
 - Install all dependencies. `npm install`
 - Import database `db.sql`
+- In config/congif.json change database username and password
 
 ### Dependencies
 - **express**
