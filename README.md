@@ -33,10 +33,10 @@ Open Terminal/bash window
 - **mysql2**
 - **sequelize**
 
-## Developed with
+### Developed with
 Node.js, Express, MySQL, Sequelize, JQuery, Bootstrap
 
-## [Demo](https://salty-earth-12670.herokuapp.com/)
+### [Demo](https://salty-earth-12670.herokuapp.com/)
 
 ## Author
 Jhongert Fuertes
