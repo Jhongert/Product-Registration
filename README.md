@@ -34,12 +34,7 @@ Open Terminal/bash window
 - **sequelize**
 
 ## Developed with
-- Node.js
-- Express
-- MySQL
-- Sequelize
-- JQuery
-- Bootstrap
+Node.js, Express, MySQL, Sequelize, JQuery, Bootstrap
 
 ## [Demo](https://salty-earth-12670.herokuapp.com/)
 
