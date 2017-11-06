@@ -1,7 +1,7 @@
 # Product Registration
 A CRUD product registration app. On the server side this app uses Node and MySQL to query and route data and Handlebars to generate HTML. This app also follows the MVC design pattern and use Sequelize to interact with the database. On the client side uses Bootstrap for layout and style, and JQuery to validate user input.
 
-## How it works
+### How it works
 - The product registration form allows users to enter the product information and save it in the database.
 
 ![Create](https://github.com/Jhongert/Product-Registration/blob/master/public/assets/images/create.jpeg?raw=true)
@@ -17,7 +17,7 @@ A CRUD product registration app. On the server side this app uses Node and MySQL
 - This is the alert when the user presses the delete button.
 ![Create](https://github.com/Jhongert/Product-Registration/blob/master/public/assets/images/delete.jpeg?raw=true)
 
-## Installing
+### Installing
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 Open Terminal/bash window
 - Clone this repo. `git clone https://github.com/Jhongert/Product-Registration.git`
@@ -38,5 +38,5 @@ Node.js, Express, MySQL, Sequelize, JQuery, Bootstrap
 
 ### [Demo](https://salty-earth-12670.herokuapp.com/)
 
-## Author
+### Author
 Jhongert Fuertes
