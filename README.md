@@ -33,7 +33,7 @@ Open Terminal/bash window
 - **mysql2**
 - **sequelize**
 
-## Built with
+## Developed with
 - Node.js
 - Express
 - MySQL
