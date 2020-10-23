@@ -36,7 +36,5 @@ Open Terminal/bash window
 ### Developed with
 Node.js, Express, MySQL, Sequelize, JQuery, Bootstrap
 
-### [Demo](https://salty-earth-12670.herokuapp.com/)
-
 ### Author
 Jhongert Fuertes
